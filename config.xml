@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns       = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "org.bedgren.ccapp"
+        versionCode = "0"
+        version     = "0.0.0">
+
+  <name>CCApp</name>
+
+  <description>
+    An app for tracking progress through Convict Conditioning exercises.
+  </description>
+
+  <author email="brandon.edgren@gmail.com">
+    Brandon Edgren
+  </author>
+  
+  <preference name="orientation" value="portrait" />
+  <preference name="webviewbounce" value="false" />
+  
+  <!-- <icon src="" width="" height="" /> -->
+
+  <feature name="http://api.phonegap.com/1.0/file"/>
+
+</widget>
