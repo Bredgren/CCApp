@@ -12,14 +12,26 @@ main = ->
 
   ctx = canvas.getContext('2d')
 
-  ctx.fillStyle = "rgb(0, 0, 255)"
-  ctx.fillRect(5, 5, 20, 20)
+  ctx.strokeStyle = "rgb(0, 0, 255)"
+  ctx.strokeRect(5, 5, width-10, height-10)
 
-  u = new UiManager(5, 8)
+  uiManager.elementIs("e1", uiElementType.element)
 
-  console.log("#{u.a}, #{u.b}\n")
-  u.a += 5
-  u.b += 5
-  console.log("#{u.a}, #{u.b}\n")
+  e1 = uiManager.element('e1')
+  e1.childIs("b1", uiElementType.button)
+  console.log("e1:", e1.type(), e1)
+  b1 = uiManager.element('e1').child('b1')
+  console.log("b1:", b1.type(), b1)
+
+  # input move
+  onInputMove = (e) ->
+
+  # input start
+  onInputStart = (e) ->
+
+  # input end
+  onInputEnd = (e) ->
+
+  #canvas.addEventListener('', , false)
 
 main()

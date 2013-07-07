@@ -3,7 +3,7 @@
   var main;
 
   main = function() {
-    var canvas, ctx, height, u, width;
+    var b1, canvas, ctx, e1, height, onInputEnd, onInputMove, onInputStart, width;
 
     canvas = document.getElementById('theCanvas');
     width = window.innerWidth;
@@ -13,13 +13,17 @@
     canvas.height = height;
     console.log("Setting canvas size to (" + width + ", " + height + ")");
     ctx = canvas.getContext('2d');
-    ctx.fillStyle = "rgb(0, 0, 255)";
-    ctx.fillRect(5, 5, 20, 20);
-    u = new UiManager(5, 8);
-    console.log("" + u.a + ", " + u.b + "\n");
-    u.a += 5;
-    u.b += 5;
-    return console.log("" + u.a + ", " + u.b + "\n");
+    ctx.strokeStyle = "rgb(0, 0, 255)";
+    ctx.strokeRect(5, 5, width - 10, height - 10);
+    uiManager.elementIs("e1", uiElementType.element);
+    e1 = uiManager.element('e1');
+    e1.childIs("b1", uiElementType.button);
+    console.log("e1:", e1.type(), e1);
+    b1 = uiManager.element('e1').child('b1');
+    console.log("b1:", b1.type(), b1);
+    onInputMove = function(e) {};
+    onInputStart = function(e) {};
+    return onInputEnd = function(e) {};
   };
 
   main();

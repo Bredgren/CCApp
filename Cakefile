@@ -36,7 +36,10 @@ concatenateAndCompile = (files, dest, target_folder, target_file, callback) ->
   print "combining files #{files} into #{dest}\n"
   exec("coffeescript-concat #{files} -o #{dest}",
     (err, stdout, stderr) ->
-      print "compiling #{dest} into #{target_file}\n"
+      if err
+        print "FAIL concat error: #{err}\n"
+      else
+        print "compiling #{dest} into #{target_file}\n"
 
       exec("coffee -c -o #{target_folder} --join #{target_file} #{dest}",
         (err, stdout, stderr) ->
