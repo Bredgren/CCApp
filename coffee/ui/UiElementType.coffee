@@ -4,4 +4,4 @@ class UiElementType
 
 window.uiElementType =
   element: new UiElementType("element")
-  button: new UiElementType("button")
+  textElement: new UiElementType("textElement")
